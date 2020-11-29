@@ -23,7 +23,7 @@ $okMessage = 'Wiadomość została wysłana poprawnie';
 $errorMessage = 'Wystąpił problem. Spróbuj ponownie później';
 
 // ReCaptch Secret
-$recaptchaSecret = '6LeanOYZAAAAACfgsQf2mbhIZqryhG5AjeFHXcbD';
+$recaptchaSecret = '';
 
 // let's do the sending
 
