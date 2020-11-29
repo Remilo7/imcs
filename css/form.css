@@ -1,0 +1,89 @@
+.inp {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.inp .label {
+  position: absolute;
+  top: 15px;
+  left: 12px;
+  font-size: 18px;
+  color: #f5eedc;
+  font-weight: 500;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+
+.inp .focus-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.05);
+  z-index: -1;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.inp input,textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  width: 100%;
+  border: 0;
+  font-family: inherit;
+  padding: 16px 12px 0 12px;
+  height: 56px;
+  font-size: 17px;
+  font-weight: 400;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+  color: #f5eedc;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+
+.inp input:hover,textarea:hover {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.inp input:not(:placeholder-shown) + .label,textarea:not(:placeholder-shown) + .label {
+  color: rgba(255, 255, 255, 0.5);
+  -webkit-transform: translate3d(0, -12px, 0) scale(0.75);
+          transform: translate3d(0, -12px, 0) scale(0.75);
+}
+
+.inp input:focus,textarea:focus {
+  background: rgba(255, 255, 255, 0.2);
+  outline: none;
+  box-shadow: inset 0 -2px 0 #0077FF;
+}
+
+.inp input:focus + .label,textarea:focus + .label {
+  color: #0077FF;
+  -webkit-transform: translate3d(0, -12px, 0) scale(0.75);
+          transform: translate3d(0, -12px, 0) scale(0.75);
+}
+
+.inp input:focus + .label + .focus-bg,textarea:focus + .label + .focus-bg {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+textarea {
+  height: 300px !important;
+}
