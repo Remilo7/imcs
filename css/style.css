@@ -87,6 +87,12 @@ body:before {
 	height: 150px;
 }
 
+#sec_rodo {
+	font-size: 17px;
+	text-align: justify;
+	padding-top: 100px;
+}
+
 #sec1 {
 	font-size: 17px;
 	text-align: justify;
